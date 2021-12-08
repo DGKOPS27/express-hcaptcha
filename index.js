@@ -17,7 +17,7 @@ const validate = (secret, sitekey) => (req, res, next) => {
 
   // verify the hcaptcha and continue on success
   // call next with an error if verification errors or fails
-  return hcaptcha.verify(secret, token, sitekey)
+  return hcaptcha.verify(secret, token, null, sitekey)
     .then((data) => {
       req.hcaptcha = data;
       if (data.success) {
