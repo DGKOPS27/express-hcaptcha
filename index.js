@@ -2,11 +2,11 @@ const hcaptcha = require('hcaptcha');
 
 // validate takes an hCaptcha secret and returns
 // an express middleware function
-const validate = (secret) => (req, res, next) => {
+const validate = (secret, sitekey) => (req, res, next) => {
   // get token from the body
   // requires the body parser JSON middleware
   // on the app that uses this middleware
-  const token = req.body["h-captcha-response"];
+  const token = req.body["g-captcha-response"] ?? req.body["h-captcha-response"];
 
   // call next with an error if no token present
   if (!token) {
@@ -17,7 +17,7 @@ const validate = (secret) => (req, res, next) => {
 
   // verify the hcaptcha and continue on success
   // call next with an error if verification errors or fails
-  return hcaptcha.verify(secret, token)
+  return hcaptcha.verify(secret, token, sitekey)
     .then((data) => {
       req.hcaptcha = data;
       if (data.success) {
