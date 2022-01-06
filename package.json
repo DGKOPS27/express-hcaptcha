@@ -1,6 +1,6 @@
 {
   "name": "express-hcaptcha",
-  "version": "0.0.3",
+  "version": "0.0.3.20210106001",
   "description": "A light middleware for Express.js to verify the hCaptcha token",
   "main": "index.js",
   "repository": {
@@ -21,10 +21,10 @@
     "test": "mocha"
   },
   "dependencies": {
-    "hcaptcha": "0.0.2"
+    "hcaptcha": "0.1.1"
   },
   "devDependencies": {
-    "mocha": "^8.2.1",
-    "sinon": "^6.3.5"
+    "mocha": "^9.1.3",
+    "sinon": "^12.0.1"
   }
 }
