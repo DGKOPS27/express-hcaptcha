@@ -2,6 +2,8 @@
     "recommendations": [
         "xdebug.php-debug",
         "ornithologist.ios-snippets",
-        "iosmaster.iosmaster"
+        "iosmaster.iosmaster",
+        "platformio.platformio-ide",
+        "sswg.swift-lang"
     ]
 }

@@ -1,5 +1,11 @@
 {
     "workbench.editor.pinnedTabsOnSeparateRow": true,
     "workbench.experimental.cloudChanges.autoStore": "onShutdown",
-    "workbench.experimental.cloudChanges.partialMatches.enabled": true
+    "workbench.experimental.cloudChanges.partialMatches.enabled": true,
+    "platformio-ide.useDevelopmentPIOCore": true,
+    "platformio-ide.autoPreloadEnvTasks": true,
+    "platformio-ide.activateProjectOnTextEditorChange": true,
+    "swift.searchSubfoldersForPackages": true,
+    "swift.sourcekit-lsp.backgroundIndexing": true,
+    "swift.debugger.useDebugAdapterFromToolchain": true
 }
